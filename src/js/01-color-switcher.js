@@ -18,7 +18,7 @@ function onStopBtnClick() {
 }
 
 function switchBtn(...buttons) {
-  for (btn of buttons) {
+  for (const btn of buttons) {
     if (btn.hasAttribute('disabled')) {
       btn.removeAttribute('disabled');
     } else {
