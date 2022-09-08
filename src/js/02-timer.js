@@ -73,10 +73,13 @@ function updateTimerUI(time) {
     minutes: UIminutes,
     seconds: UIseconds,
   } = timerElementsRefsObj;
-  UIdays.textContent = days.toString().padStart(2, '0');
-  UIhours.textContent = hours.toString().padStart(2, '0');
-  UIminutes.textContent = minutes.toString().padStart(2, '0');
-  UIseconds.textContent = seconds.toString().padStart(2, '0');
+
+  const formatNum = number => number.toString().padStart(2, '0');
+
+  UIdays.textContent = formatNum(days);
+  UIhours.textContent = formatNum(hours);
+  UIminutes.textContent = formatNum(minutes);
+  UIseconds.textContent = formatNum(seconds);
 }
 
 function convertMs(ms) {
